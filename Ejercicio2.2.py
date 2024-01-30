@@ -8,10 +8,10 @@ pygame.display.set_caption("ejercicio 2")
 ball = pygame.image.load("OBAMNA.png")
 
 # Transforma el tamaño del objeto ball
-ball = pygame.transform.scale(ball, (60, 60))
+ball = pygame.transform.scale(ball, (100, 140))
 
 # Inicializo los valores con los que se van a mover la pelota
-speed = [6,6]
+speed = [4,4]
 
 # Pongo la pelota en el origen de coordenadas
 ballrect = ball.get_rect()
@@ -32,7 +32,7 @@ while jugando:
     if ballrect.top < 0 or ballrect.bottom > ventana.get_height():
         speed[1] = -speed[1]
     
-    ventana.fill((252, 243, 207))
+    ventana.fill((238, 255, 172))
 
     # Dibujo la pelota
     ventana.blit(ball, ballrect)
