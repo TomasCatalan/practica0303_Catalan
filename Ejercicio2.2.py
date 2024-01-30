@@ -21,10 +21,12 @@ ballrect.move_ip(0,0)
 
 # Crea el objeto bate, y obtengo su rectángulo
 bate = pygame.image.load("nuke(barra).png")
+
 baterect = bate.get_rect()
 
 # Pongo el bate en la parte inferior de la pantalla
 baterect.move_ip(240,450)
+
 
 
 jugando = True
