@@ -1,6 +1,5 @@
 import pygame
 
-
 pygame.init()
 ventana = pygame.display.set_mode((1080,720))
 pygame.display.set_caption("ejercicio 2")
@@ -8,17 +7,14 @@ pygame.display.set_caption("ejercicio 2")
 # Crea el objeto pelota
 ball = pygame.image.load("OBAMNA.png")
 
-ball_size = (10,10)
-
-smaller_image = pygame.transform.scale(ball, ball_size)
-# Obtengo el rectángulo del objeto anterior
-ballrect = ball.get_rect()
+# Transforma el tamaño del objeto ball
+ball = pygame.transform.scale(ball, (60, 60))
 
 # Inicializo los valores con los que se van a mover la pelota
-speed = [4,4]
+speed = [6,6]
 
 # Pongo la pelota en el origen de coordenadas
-ballrect.move_ip(0,0)
+ballrect = ball.get_rect()
 
 jugando = True
 while jugando:
@@ -44,4 +40,3 @@ while jugando:
     pygame.time.Clock().tick(60)
 
 pygame.quit()
-
