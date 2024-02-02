@@ -24,7 +24,7 @@ ballrect = ball.get_rect()
 ballrect.move_ip(0,0)
 
 # Crea el objeto bate, y obtengo su rectángulo
-bate = pygame.image.load("nuke(barra).png")
+bate = pygame.image.load("nuke(barra)3.png")
 
 # Transforma el tamaño del objeto bate
 bate = pygame.transform.scale(bate, (200, 55))
