@@ -22,10 +22,14 @@ ballrect.move_ip(0,0)
 # Crea el objeto bate, y obtengo su rectángulo
 bate = pygame.image.load("nuke(barra).png")
 
+# Transforma el tamaño del objeto ball
+bate = pygame.transform.scale(bate, (200, 55))
+
+
 baterect = bate.get_rect()
 
 # Pongo el bate en la parte inferior de la pantalla
-baterect.move_ip(240,450)
+baterect.move_ip(440,600)
 
 
 
@@ -38,14 +42,15 @@ while jugando:
     # Compruebo si se ha pulsado alguna tecla
     keys = pygame.key.get_pressed()
     if keys[pygame.K_LEFT]:
-        baterect = baterect.move(-3,0)
+        baterect = baterect.move(-10,0)
     if keys[pygame.K_RIGHT]:
-        baterect = baterect.move(3,0)
+        baterect = baterect.move(10,0)
 
     # Compruebo si hay colisión
     if baterect.colliderect(ballrect):
         speed[1] = -speed[1]
     
+   
     # Muevo la pelota
     ballrect = ballrect.move(speed)
     
