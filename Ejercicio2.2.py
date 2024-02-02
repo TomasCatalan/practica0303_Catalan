@@ -26,7 +26,6 @@ ballrect.move_ip(0,0)
 # Transforma el tamaño de la imagen de fondo
 fondo = pygame.transform.scale(fondo, (1080, 720))
 
-
 jugando = True
 while jugando:
     for event in pygame.event.get():
