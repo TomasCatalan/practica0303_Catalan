@@ -31,10 +31,6 @@ baterect.move_ip(240,450)
 bate = pygame.transform.scale(bate, (150, 140))
 
 
-
-
-
-
         
 jugando = True
 while jugando:
@@ -45,9 +41,9 @@ while jugando:
     # Compruebo si se ha pulsado alguna tecla
     keys = pygame.key.get_pressed()
     if keys[pygame.K_LEFT]:
-        baterect = baterect.move(-3,0)
+        baterect = baterect.move(-5,0)
     if keys[pygame.K_RIGHT]:
-        baterect = baterect.move(3,0)
+        baterect = baterect.move(5,0)
 
     # Compruebo si hay colisión
     if baterect.colliderect(ballrect):
