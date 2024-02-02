@@ -7,6 +7,10 @@ pygame.display.set_caption("ejercicio 2")
 # Crea el objeto pelota
 ball = pygame.image.load("OBAMNA.png")
 
+# Establece imagen de fondo
+fondo = pygame.image.load("IraqBackground.png")
+ventana.blit(fondo, (0,0))
+
 # Transforma el tamaño del objeto ball
 ball = pygame.transform.scale(ball, (100, 140))
 
@@ -25,13 +29,14 @@ bate = pygame.image.load("nuke(barra).png")
 # Transforma el tamaño del objeto bate
 bate = pygame.transform.scale(bate, (200, 55))
 
+# Transforma el tamaño de la imagen de fondo
+fondo = pygame.transform.scale(fondo, (1080, 720))
 
 baterect = bate.get_rect()
 
 # Pongo el bate en la parte inferior de la pantalla
-baterect.move_ip(440,600)
+baterect.move_ip(440,650)
 
-batespeed = [10,0]
 
 jugando = True
 while jugando:
@@ -53,18 +58,22 @@ while jugando:
     # Muevo la pelota
     ballrect = ballrect.move(speedball)
     
-     # Compruebo si la pelota llega a los límites de la ventana
+    # Compruebo si la pelota llega a los límites de la ventana
     if ballrect.left < 0 or ballrect.right > ventana.get_width():
         speedball[0] = -speedball[0]
     if ballrect.top < 0 or ballrect.bottom > ventana.get_height():
         speedball[1] = -speedball[1]
     
+    # Establece colision del bate con las paredes de la ventana
     if baterect.left < 0:
        baterect = baterect.move(10,0)
     if baterect.right > ventana.get_width():
         baterect = baterect.move(-10,0)
     
-    ventana.fill((238, 255, 172))
+    #establece el fondo como una imagen, fill evita trazado de la bola
+    ventana.fill((0, 0, 0))
+    ventana.blit(fondo, (0,0))
+
     ventana.blit(ball, ballrect)
 
     # Dibujo la pelota
