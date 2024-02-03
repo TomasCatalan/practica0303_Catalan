@@ -27,7 +27,7 @@ ballrect.move_ip(0,0)
 bate = pygame.image.load("barra(perro).png")
 
 # Transforma el tamaño del objeto bate
-bate = pygame.transform.scale(bate, (100, 50))
+bate = pygame.transform.scale(bate, (100, 80))
 
 # Transforma el tamaño de la imagen de fondo
 fondo = pygame.transform.scale(fondo, (1080, 720))
@@ -35,7 +35,7 @@ fondo = pygame.transform.scale(fondo, (1080, 720))
 baterect = bate.get_rect()
 
 # Pongo el bate en la parte inferior de la pantalla
-baterect.move_ip(440,650)
+baterect.move_ip(440,600)
 
 
 jugando = True
