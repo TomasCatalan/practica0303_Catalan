@@ -17,7 +17,6 @@ while jugando:
             jugando = False
 
     # Se pinta la ventana con un color
-    # Esto borra los posibles elementos que teníamos anteriormente
     ventana.fill((238, 255, 172))
 
     # Todos los elementos del juego se vuelven a dibujar
