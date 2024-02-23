@@ -15,7 +15,7 @@ ventana.blit(fondo, (0,0))
 ball = pygame.transform.scale(ball, (100, 140))
 
 # Inicializo los valores con los que se van a mover la pelota
-speedball = [4,4]
+speedball = [5,5]
 
 # Pongo la pelota en el origen de coordenadas
 ballrect = ball.get_rect()
@@ -45,12 +45,10 @@ while jugando:
     ventana.fill((0, 0, 0))
     ventana.blit(fondo, (0,0))
 
-    ventana.blit(ball, ballrect)
-
     # Dibujo la pelota
     ventana.blit(ball, ballrect)
 
     pygame.display.flip()
-    pygame.time.Clock().tick(60)
+    pygame.time.Clock().tick(120)
 
 pygame.quit()
