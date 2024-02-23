@@ -14,7 +14,7 @@ ventana.blit(fondo, (0,0))
 # Transforma el tamaño del objeto ball
 ball = pygame.transform.scale(ball, (100, 140))
 
-# Inicializo los valores con los que se van a mover la pelota
+# indica la velocidad de la pelota
 speedball = [5,5]
 
 # Pongo la pelota en el origen de coordenadas
